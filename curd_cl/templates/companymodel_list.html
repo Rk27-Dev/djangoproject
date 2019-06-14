@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+    <h1 style="color: red">hello welcome to home page</h1>
+    <h1 style="color: red">company list:</h1>
+    {% for i in companymodel_list %}
+{#       <h2> <a href="/{{ i.id }}"  {{ i.name }}></a></h2>#}
+       <table> <tr>
+            <td><h2>{{ i.name }}</h2></td>
+        </tr><br>
+        <tr>
+            <td><h2>{{ i.loc }}</h2></td>
+        </tr><br>
+        <tr>
+            <td><h2>{{ i.ceo }}</h2></td>
+        </tr></table>
+    {% endfor %}
+    </form>
+{% endblock %}

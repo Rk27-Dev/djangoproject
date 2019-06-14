@@ -1,0 +1,33 @@
+.content{
+    width: 60%;
+    float: left;
+    padding: 0 0 0 30px;
+    background: aqua;
+}
+.sidebar{
+    width: 40%;
+    float: right;
+    padding: 0 0 0 20px;
+    background: moccasin;
+}
+h1{
+    text-align: center;
+    border-bottom: 1px red;
+    padding-bottom: 10px;
+}
+body {
+    color: darkgreen;
+    background: aqua;
+}
+#date{
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+}
+a{
+    color: red;
+}
+input{
+    background:aquamarine;
+    color: red;
+}

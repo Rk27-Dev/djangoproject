@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+ {% block body_block %}
+    <h1>
+    Your shoping mall items information</h1>
+     {% if request.session %}
+        <table>
+        <thead>
+        <th>
+                name of the item
+        </th>
+        <th>quantity</th>
+        </thead>
+        {% for key,value in request.session.items %}
+        <tr>
+            <td>{{ key }}</td><br>
+            <td>{{ value }}</td>
+        </tr>
+        </table>
+     {% endfor %}
+     {% else %}
+     <p>
+     no items in shoping cart
+     </p>
+     {% endif %}
+
+{% endblock %}

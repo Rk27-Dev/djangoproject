@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+    {% block body_block %}
+        <h1>Add item </h1>
+        <style>
+        h1{
+            color: red;
+            display: table;
+        }
+        </style>
+        <form method="post"
+    {{ form.as_p }}
+    {% csrf_token %}>
+        <input type="submit" class="btn btn-primary btn-large" value="Add item">
+            <br>
+        <a href="/display" class="btn btn-info" role="button">Display items</a>
+        </form>
+    {% endblock %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'blog/base.html' %}
+{% block Tittle_block %}
+    <h1>Ravi's blog HOme page</h1>
+{% endblock %}po
+{% block content%}
+    <h1> RAVI'S BLOG</h1>
+    {% for post in post_list %}
+
+        <a href="{{post.get_absolute_url }}" ><h2>{{ post.tittle }}</h2></a>
+        <p id='date'>Published on {{ post.publish }}by {{ post.author|title }}</p>
+        {{ post.body|truncatewords:50|linebreaks }}
+          <a href="/{{ post.id }}/share" class="btn btn-lg btn-success" >share post by email</a>
+    {% endfor %}
+{#    {% include 'blog/pagination.html' with page=page_obj %}#}
+    {% include 'blog/pagination.html' with page=post_list %}
+{% endblock %}

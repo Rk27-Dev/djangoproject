@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+    <h1 style="color: red">Signup page</h1>
+    <body style="color: #333333">
+    <form method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+     <input type="submit"value="Signup" class="btn btn-ptimary btn-lg">
+    </form>
+    </body>
+{% endblock %}

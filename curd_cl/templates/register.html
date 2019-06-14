@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block body_block %}
+    <h1 style="color: aqua">hello welcome to Register page</h1>
+    {% for company in company_list %}
+        <table>
+        <thead>
+        <tr>
+            {{ company.name }}<br>
+            {{ company.loc }}<br>
+            {{ company.ceo }}
+        </tr>
+        </thead>
+        </table>
+    {% endfor %}
+    <input type="button" value="submit" style="color: red">
+    </form>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>session</title>
+</head>
+<style>
+    body {
+  display: block;
+  margin: 8px;
+}
+    span{
+        font-size: 200px;
+    }
+
+body:focus {
+  outline: none;
+}
+    h1{
+        color: red;
+        margin: 20px;
+        alignment: center;
+
+    }
+    p{
+        color: green;
+        alignment: center;
+    }
+</style>
+<body>
+<h1> This is sesssion id </h1>
+<p>
+    This is count of session:{{ count }}
+</p>
+</body>
+</html>
